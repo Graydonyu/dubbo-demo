@@ -1,4 +1,4 @@
-package com.graydon.dubbo.provider.service;
+package com.graydon.dubbo.common.service;
 
 public interface IProviderService {
 

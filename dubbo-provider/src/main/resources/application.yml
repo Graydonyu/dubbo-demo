@@ -1,0 +1,28 @@
+server:
+  port: 8002
+
+dubbo:
+  application:
+    name: dubbo-provider
+  registry:
+    address: zookeeper://139.196.72.211:2181 #zookeeper地址
+  protocol:
+    name: dubbo
+    port: 20880 #dubbo服务暴露的端口
+
+spring:
+  output:
+    ansi:
+      enabled: always #彩色控制台日志输出
+
+curator:
+  #重试次数
+  retryCount: 5
+  #重试间隔时间
+  elapsedTimeMs: 5000
+  # zookeeper 地址
+  connectString: 139.196.72.211:2181
+  # session超时时间
+  sessionTimeoutMs: 60000
+  # 连接超时时间
+  connectionTimeoutMs: 5000

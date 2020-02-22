@@ -1,0 +1,28 @@
+server:
+  port: 8001
+
+dubbo:
+  application:
+    name: dubbo-consumer
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://139.196.72.211:2181 #zookeeper地址
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+curator:
+  #重试次数
+  retryCount: 5
+  #重试间隔时间
+  elapsedTimeMs: 5000
+  # zookeeper 地址
+  connectString: 139.196.72.211:2181
+  # session超时时间
+  sessionTimeoutMs: 60000
+  # 连接超时时间
+  connectionTimeoutMs: 5000
